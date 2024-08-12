@@ -3,14 +3,14 @@ This Python project is a search engine that crawls Reddit posts and ranks them u
 
 Features:
 
-Crawls Reddit Posts: Extracts posts and comments from specified subreddits.
-PageRank Algorithm: Ranks posts based on their relevance and importance.
-Search Functionality: Allows users to search for posts and view ranked results.
+1. Crawls Reddit Posts: Extracts posts and comments from specified subreddits.
+2. PageRank Algorithm: Ranks posts based on their relevance and importance.
+3. Search Functionality: Allows users to search for posts and view ranked results.
+   
 Requirements:
-
-PRAW (Reddit API) to crawl
-BeautifulSoup to parse HTML content
-Multiprocessing library to crawl multiple subreddits at once
-Data Indexer (PyLucene)
-Web Page Hoster (Django)
-Database
+1.PRAW (Reddit API) to crawl
+2.BeautifulSoup to parse HTML content
+3.Multiprocessing library to crawl multiple subreddits at once
+4.Data Indexer (PyLucene)
+5.Web Page Hoster (Django)
+6.Database
