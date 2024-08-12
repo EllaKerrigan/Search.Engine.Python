@@ -1,5 +1,6 @@
 # Search.Engine.Python
-![Diagram](Diagram.Search.Engine.pdf)
+[Diagram.Search.Engine.pdf](https://github.com/user-attachments/files/16591935/Diagram.Search.Engine.pdf)
+
 
 This Python project is a search engine that crawls Reddit posts and ranks them using the PageRank algorithm. I used reddit topics that were of relevance to myself and my friends, which made it a fun project to take on. The goal is to provide an example of web crawling, data processing, and search ranking.
 
