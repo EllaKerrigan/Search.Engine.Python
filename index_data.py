@@ -3,17 +3,17 @@
 import re
 import sqlite3
 
-# Function to tokenize the text
+#tokenize the text
 def tokenize(text):
     tokens = re.findall(r'\b\w+\b', text.lower())
     return tokens
 
-# Function to normalize the tokens
+#normalize the tokens
 def normalize(tokens):
     normalized_tokens = [token.lower() for token in tokens]
     return normalized_tokens
 
-# Function to build an inverted index from the documents
+#build an inverted index from the documents
 def build_inverted_index(documents):
     inverted_index = {}
     for doc_id, text in documents.items():
@@ -25,7 +25,7 @@ def build_inverted_index(documents):
                 inverted_index[token] = {doc_id}
     return inverted_index
 
-# Function to store the inverted index in SQLite
+#Storing the inverted index in the database
 def store_inverted_index(inverted_index, db_path):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
@@ -43,15 +43,14 @@ def store_inverted_index(inverted_index, db_path):
     conn.close()
 
 def main():
-    db_path = 'mydatabaseSearchEngine.db'  # Your database path
+    db_path = 'mydatabaseSearchEngine.db'  
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
-    # Fetch data from both posts and comments
+    # retrieve the data from both posts and comments
     cursor.execute('SELECT id, title FROM posts')
     posts = {row[0]: row[1] for row in cursor.fetchall()}
-    print("Posts:", posts)  # Debugging print
-
+    print("Posts:", posts)  #using to debug
     cursor.execute('SELECT post_id, body FROM comments')
     comments = {}
     for row in cursor.fetchall():
@@ -59,10 +58,10 @@ def main():
             comments[row[0]] += ' ' + row[1]
         else:
             comments[row[0]] = row[1]
-    print("Comments:", comments)  # Debugging print
+    print("Comments:", comments)  #using to debug
 
     documents = {**posts, **comments}
-    print("Documents:", documents)  # Debugging print
+    print("Documents:", documents)  #using to debug
 
     conn.close()
 
