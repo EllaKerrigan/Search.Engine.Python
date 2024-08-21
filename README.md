@@ -2,20 +2,19 @@
 
 <img width="428" alt="Screenshot 2024-08-12 at 14 33 43" src="https://github.com/user-attachments/assets/f5ef680e-675b-4dea-adad-c09559d2b7bc">
 
+This Python project implements a search engine that utilizes the PageRank algorithm to rank Reddit posts. The project was inspired by relevant Reddit topics shared by myself and my peers, adding an element of personal engagement to the development process. The primary objective is to demonstrate techniques in web crawling, data processing, and search ranking.
 
+Key Features:
 
-This Python project is a search engine that crawls Reddit posts and ranks them using the PageRank algorithm. I used reddit topics that were of relevance to myself and my friends, which made it a fun project to take on. The goal is to provide an example of web crawling, data processing, and search ranking.
+- Reddit Post Crawling: Extracts posts and comments from designated subreddits.
+- PageRank Algorithm: Ranks posts based on their relevance and significance.
+- Search Functionality: Provides a search interface for users to find posts and view results sorted by rank.
 
-Features:
+Technical Requirements:
 
-1. Crawls Reddit Posts: Extracts posts and comments from specified subreddits.
-2. PageRank Algorithm: Ranks posts based on their relevance and importance.
-3. Search Functionality: Allows users to search for posts and view ranked results.
-   
-Requirements:
-1.PRAW (Reddit API) to crawl
-2.BeautifulSoup to parse HTML content
-3.Multiprocessing library to crawl multiple subreddits at once
-4.Data Indexer (PyLucene)
-5.Web Page Hoster (Django)
-6.Database
+- PRAW: For accessing Reddit's API to crawl posts and comments.
+- BeautifulSoup: For parsing HTML content.
+- Multiprocessing Library: To enable concurrent crawling of multiple subreddits.
+- PyLucene: For indexing and searching data.
+- Django: For hosting the web interface.
+- Database: For storing crawled data and search results.
